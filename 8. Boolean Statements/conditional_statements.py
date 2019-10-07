@@ -28,3 +28,11 @@ else:
 
 if not b:
     print(f"not {a} is {not a}")
+
+# is vs ==
+# is checks that whether they are stored in same memory address
+# == checks the values inside them
+# a = [1, 2, 3]
+# b = [1, 2, 3]
+# a == b gives true
+# a is b gives false
