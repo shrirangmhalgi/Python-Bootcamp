@@ -14,3 +14,19 @@ locations = {
 }
 
 print(locations[(3.0, 2.0)])
+
+#looping through tuples
+for num in numbers:
+    print(num)
+
+i = len(numbers) - 1
+while i >= 0 :
+    print(numbers[i])
+    i -= 1
+
+# tuple methods
+# 1. count returns the number of times the item is present in the tuple
+print(numbers.count(1))
+
+# 2. index returns the first index of the value in the tuple
+print(numbers.index(1))
