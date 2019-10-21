@@ -35,3 +35,29 @@ print(''.join(list(reversed("hello world"))))
 
 # 8. len
 print("hello".__len__())
+
+# 9. abs returns the absolute value of a number
+print(abs(-1.2))
+print(abs(-1))
+print(abs(1.2))
+print(abs(1))
+ 
+# 10. sum returns the sum of the collection
+print(sum(list1, 100))
+
+# 11. round rounds off the given number
+print(round(1.212121, 2))
+print(round(1.5))
+
+# 12. zip is used to bind 2 or more collections together it stops as soon as the shortest iterable is exhausted
+list1 = list(range(10, 20))
+list2 = list(range(20, 30))
+print(dict(zip(list1, list2)))
+
+midterms = [80,91,78]
+finals = [98,89,53]
+students = ['dan', 'ang', 'kate']
+print({pair[0] : max(pair[1], pair[2]) for pair in zip(students, midterms, finals)})
+
+print(dict(zip(students, map(lambda pair: max(pair), zip(midterms, finals)))))
+print(dict(zip(students, map(lambda pair: ((pair[0] + pair[1]) / 2), zip(midterms, finals)))))
