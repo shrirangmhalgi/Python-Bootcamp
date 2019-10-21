@@ -26,3 +26,12 @@ print(min(list1, key = lambda n : n > 5))
 # 6. max() finds the maximum element
 print(max(list1))
 print(max(list1, key = lambda n : n < 2))
+
+# 7. reversed returns a reverse iterator
+for i in reversed(list1):
+    print(i)
+
+print(''.join(list(reversed("hello world"))))
+
+# 8. len
+print("hello".__len__())
