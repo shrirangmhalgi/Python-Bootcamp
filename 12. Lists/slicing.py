@@ -29,3 +29,26 @@ print(str(some_list[6])[::-1])
 my_name = ["shrirang", "rajendra", "mhalgi"]
 my_name[0], my_name[2] = my_name[2], my_name[0]
 print(my_name)
+
+"""
+retrieves item with index 5
+alist[5]
+
+retrieves item's between index 1 & index 10 (but not index 10)
+alist[1:10]
+
+retrieves every 2nd item between index 1 & index 10 (but not index 10)
+alist[1:10:2]
+
+returns the list item in the array
+alist[-1]
+
+returns the 3rd last item in the array
+alist[-3]
+
+1. Reversing a list: alist[::-1]
+2. Removing every nth element of the list alist[n-1::n]
+3. Pop off the last n elements alist[:-n]
+4. Shift the first n elements alist[n:]
+5. Get a list of numbers with index divisble by nlist(range(500))[::n]
+"""
