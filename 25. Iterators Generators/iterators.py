@@ -1,1 +1,0 @@
-# iterator is used to iterate over iterable collections
