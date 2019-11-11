@@ -1,0 +1,1 @@
+#iterator is something which is used to iterate over objects
