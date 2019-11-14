@@ -18,6 +18,9 @@ class Deck:
     def __repr__(self):
         return f"Deck of {self.count()} cards"
 
+    def __iter__(self):
+        return iter(self.cards)
+
     def _deal(self, number_of_cards):
         count = min((self.count(), number_of_cards))
 
