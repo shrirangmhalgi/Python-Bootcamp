@@ -16,6 +16,9 @@ html = """
     <div class="hero-quote">
       <p class="text">Someone's loss is someone's gain.</p>
     </div>
+    <div class="hero-quote">
+      <p class="text" id="shri">Fall forward.</p>
+    </div>
   </section>
 </body>
 </html>
@@ -27,4 +30,11 @@ soup = BeautifulSoup(html, "html.parser")
 # print(soup.find_all("div"))
 # print(soup.find(id='text'))
 # print(soup.find(class_="text"))
-print(soup.find(attrs={"class" : "hero-image"}))
+# print(soup.find(attrs={"class" : "hero-image"}))
+# print(soup.select(".hero-image")) -> css class
+# print(soup.select("#hero-image")) -> css id
+# print(soup.select("[hero-image]")) -> css attribute
+for i in soup.select(".text"):
+  print(i.get_text())
+  print(i.name)
+  print(i.attrs)
