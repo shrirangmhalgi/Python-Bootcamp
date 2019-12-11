@@ -25,17 +25,12 @@ html = """
 """
 
 soup = BeautifulSoup(html, "html.parser")
-# print(soup.div.p)
-# print(soup.find("div"))
-# print(soup.find_all("div"))
-# print(soup.find(id='text'))
-# print(soup.find(class_="text"))
-# print(soup.find(attrs={"class" : "hero-image"}))
-# print(soup.select(".hero-image")) -> css class
-# print(soup.select("#hero-image")) -> css id
-# print(soup.select("[hero-image]")) -> css attribute
-print(soup.find("p")["class"])
-# for i in soup.select(".text"):
-#   print(i.get_text())
-#   print(i.name)
-#   print(i.attrs)
+# data = soup.body.contents -> returns all the contents of the tag.
+# data = soup.body.contents[1].contents[1].next_sibling.next_sibling.previous_sibling -> returns the next sibling of the data
+# data = soup.body.contents[1].contents[1].parent.parent -> returns the parent of the current element
+# data = soup.find(class_="hero-quote").find_next_sibling()
+data = soup.find(class_="hero-quote").find_next_sibling(class_="hero-image")
+data = soup.find(class_="hero-quote").find_previous_sibling()
+data = soup.find(class_="hero-quote").find_parent()
+data = soup.find(class_="hero-quote").find_parent("html")
+print(data)
